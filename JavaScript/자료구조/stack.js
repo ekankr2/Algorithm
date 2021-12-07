@@ -8,8 +8,7 @@ console.log(stack)
 // console.log(stack[stack.length-1])
 
 console.log(stack.pop())
-console.log(stack)
-stack.pop()
+let a = stack.pop()
 stack.pop()
 
 console.log(stack)
