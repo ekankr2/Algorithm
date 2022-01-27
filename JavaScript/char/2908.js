@@ -8,13 +8,13 @@ function reverseNum(input) {
 }
 
 function filterBiggerNum(a, b) {
-    if(a > b) {
+    if (a > b) {
         return a
     }
     return b
 }
 
-function solve(a, b){
+function solve(a, b) {
     let reversedA = reverseNum(a)
     let reversedB = reverseNum(b)
 
