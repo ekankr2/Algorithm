@@ -2,16 +2,26 @@ const fs = require('fs');
 const input = +fs.readFileSync('input.txt').toString();
 
 const five = (input) => {
-    if(input % 5 % 3 > 0) {
+    if ((input - 5) % 3 === 0) {
+        return 1
+    }
+
+    if (input % 5 % 3 > 0) {
         return 0
     }
+
     return Math.floor(input / 5)
 }
 
 const three = (input) => {
-    if(five(input) === 0){
+    if (five(input) === 0) {
         return input / 3
     }
+
+    if (five(input) === 1) {
+        return (input - 5) / 3
+    }
+
     return input % 5 / 3
 }
 
