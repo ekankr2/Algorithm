@@ -1,7 +1,7 @@
 import sys
 
-a, b = sys.stdin.readline().split()
-
+input = sys.stdin.readline()
+a, b = map(int, input.split())
 
 def compare(x, y):
     if x > y:
