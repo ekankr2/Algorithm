@@ -7,3 +7,5 @@ def pivot(n):
         return n
 
     return pivot(n - 1) + pivot(n - 2)
+
+print(pivot(n))
