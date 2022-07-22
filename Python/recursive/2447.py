@@ -1,15 +1,20 @@
-import math
 import sys
+sys.setrecursionlimit(10**6)
 
-N = int(sys.stdin.readline())
-세제곱근 = math.floor(27**(1/3))
+def append_star(LEN):
+    if LEN == 1:
+        return ['*']
 
+    Stars = append_star(LEN//3)
+    L = []
 
-def recursive(n):
-    if  n**0.5
+    for S in Stars:
+        L.append(S*3)
+    for S in Stars:
+        L.append(S+' '*(LEN//3)+S)
+    for S in Stars:
+        L.append(S*3)
+    return L
 
-    print(n * '*')
-    recursive(n-1)
-
-
-recursive()
+n = int(sys.stdin.readline().strip())
+print('\n'.join(append_star(n)))
