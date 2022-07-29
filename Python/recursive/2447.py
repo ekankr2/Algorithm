@@ -17,4 +17,4 @@ def append_star(LEN):
     return L
 
 n = int(sys.stdin.readline().strip())
-print('\n'.join(append_star(n)))
+print((append_star(n)))
