@@ -8,11 +8,12 @@ num_list = list(map(int, sys.stdin.readline().split()))
 def black_jack(n, m, card_list):
     closest_sum = 0
 
-    for i in combinations(card_list, 3):
-        temp_sum = sum(i)
-        if temp_sum == m:
-            closest_sum =
+    for cards in combinations(card_list, n):
+        if sum(cards) <= m:
+            closest_sum = max(closest_sum, sum(cards))
+
+        return closest_sum
 
 
 
-black_jack(N, M, num_list)
+print(black_jack(N, M, num_list))
