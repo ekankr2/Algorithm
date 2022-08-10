@@ -5,15 +5,14 @@ N, M = map(int, sys.stdin.readline().split())
 num_list = list(map(int, sys.stdin.readline().split()))
 
 
-def black_jack(n, m, card_list):
-    closest_sum = 0
+def black_jack(m, card_list):
+    arr = []
 
-    for cards in combinations(card_list, n):
+    for cards in combinations(card_list, 3):
         if sum(cards) <= m:
-            closest_sum = max(closest_sum, sum(cards))
+            arr.append(sum(cards))
 
-        return closest_sum
+    return max(arr)
 
 
-
-print(black_jack(N, M, num_list))
+print(black_jack(M, num_list))
