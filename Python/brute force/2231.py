@@ -2,14 +2,10 @@ N = int(input())
 
 
 def constructor(n):
-    for i in range(1, n + 1):
-        hundred = i // 100
-        ten = i % 100 // 10
-        one = i % 10
+    for i in range(n):
+        sum_i = sum(list(map(int, str(i))))
 
-        print(i + hundred + ten + one, i)
-
-        if (i + hundred + ten + one) == n:
+        if (i + sum_i) == N:
             return i
 
     return 0
