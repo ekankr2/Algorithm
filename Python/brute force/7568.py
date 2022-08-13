@@ -4,11 +4,16 @@ N = int(sys.stdin.readline())
 
 student_list = []
 
-x_arr = []
-y_arr = []
-
 for i in range(N):
     weight, height = map(int, sys.stdin.readline().split())
     student_list.append((weight, height))
 
-print(student_list[0])
+for j in student_list:
+    rank = 1
+    for k in student_list:
+        if j[0] < k[0] and j[1] < k[1]:
+            rank += 1
+
+    print(rank, end=' ')
+
+
