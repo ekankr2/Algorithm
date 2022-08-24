@@ -3,7 +3,9 @@ import sys
 N, M = map(int, sys.stdin.readline().split())
 
 count = 0
-data = []
+data = ''
+
+
 def 체스판그리는녀석(i, j):
     if i % 2 == 0:
         if j % 2 == 0:
@@ -19,9 +21,10 @@ def 체스판그리는녀석(i, j):
 
 for i in range(N):
     data = sys.stdin.readline().split()
-    print(data)
-    print('')
+    # print(data)
     for j in range(M):
-        print(j)
-        # print(data[j])
-        # print(체스판그리는녀석(i, j), end='')
+        if data[0][j] != 체스판그리는녀석(i, j):
+            count += 1
+
+
+print(count)
